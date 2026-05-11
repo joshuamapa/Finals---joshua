@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Act 3 — CSS Buttons</title>
+    <link rel="icon" href="lany.png" type="image/png">
+    <link rel="stylesheet" href="theme.css">
+    <style>
+        .buttons-page {
+            min-height: calc(100vh - 64px);
+            display: grid;
+            grid-template-columns: 280px 1fr;
+        }
+        .buttons-sidebar {
+            background: var(--gray);
+            border-right: 1px solid #1e1e1e;
+            padding: 80px 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .sidebar-top .act-num {
+            font-size: 96px;
+            font-weight: 900;
+            color: #1e1e1e;
+            line-height: 1;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar-top h2 {
+            font-size: 22px;
+            font-weight: 400;
+            color: var(--white);
+            margin-top: 16px;
+            letter-spacing: 1px;
+        }
+        .sidebar-top p {
+            font-size: 12px;
+            color: #444;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            margin-top: 16px;
+        }
+        .sidebar-bottom {
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--pink);
+            font-family: Arial, sans-serif;
+        }
+        .buttons-main { padding: 80px; padding-right: 100px; }
+        .buttons-main .section-label { margin-bottom: 48px; }
+        .btn-showcase { display: flex; flex-direction: column; gap: 0; }
+        .btn-row {
+            display: flex;
+            align-items: center;
+            padding: 24px 0;
+            border-bottom: 1px solid #1a1a1a;
+            gap: 32px;
+        }
+        .btn-row:first-child { border-top: 1px solid #1a1a1a; }
+        .btn-row-label {
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #333;
+            font-family: Arial, sans-serif;
+            width: 100px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-logo">Zara <span>Music</span></div>
+    <div class="nav-links">
+        <a href="act 5.html">Hero</a>
+        <a href="act 4.html">Audio</a>
+        <a href="act  2.html" class="active">Buttons</a>
+        <a href="act 3.html">Hover</a>
+    </div>
+</nav>
+
+<div class="buttons-page">
+    <div class="buttons-sidebar">
+        <div class="sidebar-top">
+            <div class="act-num">03</div>
+            <h2>CSS Basic<br>Buttons</h2>
+            <p>A showcase of styled buttons inspired by real-world brand design systems.</p>
+        </div>
+        <div class="sidebar-bottom">No hover effects</div>
+    </div>
+    <div class="buttons-main">
+        <p class="section-label">Act 3 — CSS Basic</p>
+        <div class="btn-showcase">
+            <div class="btn-row"><span class="btn-row-label">Uber</span><button class="uberbutton">Request now</button></div>
+            <div class="btn-row"><span class="btn-row-label">Amazon</span><button class="amazonbutton">Add to cart</button></div>
+            <div class="btn-row"><span class="btn-row-label">GitHub</span><button class="githubbutton">Sign up</button></div>
+            <div class="btn-row"><span class="btn-row-label">Bootstrap</span><button class="bootstrapbutton">Get started</button></div>
+            <div class="btn-row"><span class="btn-row-label">Bootstrap 2</span><button class="bootstrap2button">Download</button></div>
+            <div class="btn-row"><span class="btn-row-label">LinkedIn</span><button class="linkedinbutton">Apply on company website</button></div>
+            <div class="btn-row"><span class="btn-row-label">LinkedIn 2</span><button class="linkedin2button">Save</button></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

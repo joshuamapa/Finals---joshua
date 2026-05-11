@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Act 4 — Audio</title>
+    <link rel="icon" href="zaral.png" type="image/png">
+    <link rel="stylesheet" href="theme.css">
+    <style>
+        .audio-page {
+            min-height: calc(100vh - 64px);
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+        .ticker {
+            background: var(--pink);
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 10px 0;
+            border-bottom: 1px solid #0a0a0a;
+        }
+        .ticker-inner {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 22s linear infinite;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+            font-weight: 700;
+            color: var(--black);
+        }
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .audio-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .audio-info {
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-right: 1px solid #1e1e1e;
+        }
+        .audio-info .section-label { margin-bottom: 40px; }
+        .album-name {
+            font-size: clamp(40px, 4vw, 72px);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 0.95;
+            margin-bottom: 24px;
+        }
+        .album-name em {
+            display: block;
+            font-style: italic;
+            font-weight: 400;
+            color: var(--pink);
+            font-size: 0.6em;
+            letter-spacing: 2px;
+        }
+        .album-desc {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+            font-family: Arial, sans-serif;
+            max-width: 340px;
+            margin-bottom: 48px;
+        }
+        .gif-strip { display: flex; align-items: center; gap: 16px; }
+        .gif-strip img { width: 48px; height: 48px; }
+        .gif-strip span {
+            font-size: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #444;
+            font-family: Arial, sans-serif;
+        }
+        .audio-player {
+            background: var(--gray);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px;
+            gap: 32px;
+        }
+        .album-cover {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border: 2px solid var(--pink);
+            box-shadow: 0 0 30px rgba(255,77,166,0.3);
+        }
+        .player-label {
+            font-size: 10px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--pink);
+            font-family: Arial, sans-serif;
+        }
+        .player-title {
+            font-size: 20px;
+            font-weight: 400;
+            text-align: center;
+            color: var(--white);
+            letter-spacing: 1px;
+        }
+        audio {
+            width: 100%;
+            max-width: 360px;
+            filter: invert(1) sepia(1) saturate(0) brightness(0.8);
+        }
+        .audio-bottom {
+            border-top: 1px solid #1e1e1e;
+            padding: 20px 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .audio-bottom span {
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-logo">Zara <span>Music</span></div>
+    <div class="nav-links">
+        <a href="act 5.html">Hero</a>
+        <a href="act 4.html" class="active">Audio</a>
+        <a href="act  2.html">Buttons</a>
+        <a href="act 3.html">Hover</a>
+    </div>
+</nav>
+
+<div class="audio-page">
+    <div class="ticker">
+        <span class="ticker-inner">🎵 Zara Larsson — Midnight Sun &nbsp;&nbsp;•&nbsp;&nbsp; Midnight Sun Album &nbsp;&nbsp;•&nbsp;&nbsp; Now Streaming &nbsp;&nbsp;•&nbsp;&nbsp; Zara Larsson — Prettiest Thing I've Ever Seen &nbsp;&nbsp;•&nbsp;&nbsp; SOFT 2 Album &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+    </div>
+    <div class="audio-main">
+        <div class="audio-info">
+            <p class="section-label">Act 2 — Image & Audio</p>
+            <h2 class="album-name">Soft 2<em>Album</em></h2>
+            <p class="album-desc">Dive into the bold, pop-driven world of Zara Larsson. Stream her latest tracks and feel every beat come alive..</p>
+            <div class="gif-strip">
+                <img src="zara-larsson-midnight-sun.gif" alt="rocking">
+                <span>Midnight Sun Album</span>
+                <img src="zara-larsson-midnight-sun.gif" alt="rocking">
+            </div>
+        </div>
+        <div class="audio-player">
+            <img class="album-cover" src="Zaramidnight.png" alt="Album Cover">
+            <p class="player-label">Now Playing</p>
+            <p class="player-title">Midnight Sun</p>
+            <audio controls>
+                <source src="Midnight Sun - Zara Larsson.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    <div class="audio-bottom">
+        <span>Zara Larsson — Midnight Sun</span>
+        <span>Act 2 of 4</span>
+    </div>
+</div>
+
+</body>
+</html>

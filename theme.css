@@ -1,0 +1,132 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --pink: #ff4da6;
+    --pink-light: #ff80c0;
+    --black: #0a0a0a;
+    --white: #f5f5f5;
+    --gray: #1a1a1a;
+    --mid: #2e2e2e;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: var(--black);
+    border-bottom: 1px solid var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 48px;
+    height: 64px;
+}
+
+.nav-logo {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--white);
+    font-family: Arial, sans-serif;
+}
+
+.nav-logo span { color: var(--pink); }
+
+.nav-links { display: flex; gap: 0; }
+
+.nav-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    padding: 22px 20px;
+    border-left: 1px solid #1e1e1e;
+    transition: color 0.2s, background 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--pink);
+    background: #111;
+}
+
+/* SIDE PAGINATION */
+.pagination-bar {
+    position: fixed;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 998;
+}
+
+.page-btn {
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid #333;
+    color: #555;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.page-btn:hover,
+.page-btn.active {
+    background: var(--pink);
+    border-color: var(--pink);
+    color: var(--black);
+}
+
+.page-btn.prev-next {
+    width: 36px;
+    height: 28px;
+    font-size: 14px;
+    padding: 0;
+}
+
+/* SECTION LABEL */
+.section-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--pink);
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--pink);
+    opacity: 0.3;
+    max-width: 80px;
+}
+
+/* BUTTON GRID */
+.btn-grid { display: flex; flex-wrap: wrap; gap: 16px; }
+
+.uberbutton { background-color: #000; border: none; color: white; padding: 15px 32px; font-size: 16px; cursor: pointer; }
+.amazonbutton { background-color: rgb(255,216,20); border: none; color: #000; padding: 15px 32px; font-size: 16px; width: 200px; border-radius: 49px; cursor: pointer; }
+.githubbutton { background-color: rgb(46,164,79); border: none; color: white; padding: 15px 32px; font-size: 16px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+.bootstrapbutton { background-color: rgb(121,82,179); border: none; color: white; padding: 15px 32px; font-size: 16px; font-weight: bold; border-radius: 8px; cursor: pointer; }
+.bootstrap2button { background-color: white; border: 1px solid rgb(108,117,125); color: rgb(108,117,125); padding: 15px 32px; font-size: 16px; font-weight: bold; border-radius: 8px; cursor: pointer; }
+.linkedinbutton { background-color: rgb(10,102,194); border: none; color: white; padding: 15px 32px; font-size: 16px; font-weight: bold; border-radius: 49px; cursor: pointer; }
+.linkedin2button { background-color: white; border: 1px solid rgb(10,102,194); color: rgb(10,102,194); padding: 15px 32px; font-size: 16px; font-weight: bold; border-radius: 49px; cursor: pointer; }
